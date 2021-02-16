@@ -43,7 +43,7 @@
         <div class="flex items-center">
           <div class="px-3">
             <!-- Select All -->
-            <div class="flex">
+            <div class="flex items-center">
               <dropdown
                 dusk="select-all-dropdown"
                 placement="bottom-end"
@@ -95,7 +95,7 @@
                 <input
                   data-testid="search-input"
                   dusk="search"
-                  class="appearance-none form-search w-search pl-search shadow"
+                  class="appearance-none h-8 w-search pl-search shadow"
                   :placeholder="__('Search')"
                   type="search"
                   v-model="search"
@@ -193,6 +193,7 @@
             :relationship-type="relationshipType"
             :authorized-to-create="authorizedToCreate && !resourceIsFull"
             :authorized-to-relate="authorizedToRelate"
+            class="items-center"
           />
 
         </div>
@@ -1236,17 +1237,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-  .flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .sub-table {
-    width: 100%;
-  }
-  .form-global-search, .form-search {
-    height: 2rem;
-  }
-</style>
